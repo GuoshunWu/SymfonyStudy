@@ -1,6 +1,19 @@
-_welcome:
+acme_default_index:
   path: /
   defaults: {_controller: AcmeHelloBundle:Default:index}
-acme_hello_homepage:
+acme_default_hello:
+  path:  /hellodefault/{name}
+  defaults: { _controller: AcmeHelloBundle:Default:hello }
+
+acme_hello_show:
+  resource: "@AcmeHelloBundle/Controller/HelloController.php"
+  type: annotation
+  prefix: /demo
+
+acme_hello_index:
   path:  /hello/{name}
   defaults: { _controller: AcmeHelloBundle:Hello:index }
+
+
+
+
