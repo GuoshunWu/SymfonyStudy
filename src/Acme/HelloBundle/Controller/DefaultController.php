@@ -9,7 +9,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return new Response("Hello, Symphony at " .date("Y-m-d H:i:s"));
+        return new Response("Hello, symphony.");
     }
 
     public function helloAction($name)
