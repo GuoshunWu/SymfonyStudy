@@ -5,8 +5,8 @@
 /app/logs/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
-!/.idea/*
 /build/
 /vendor/
 /bin/
 /composer.phar
+/.idea
