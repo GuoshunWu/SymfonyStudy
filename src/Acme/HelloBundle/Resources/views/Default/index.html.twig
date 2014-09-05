@@ -1,1 +1,11 @@
-Hello, {{ name }}!
+ {#src/Acme/HelloBundle/Resources/views/index.html.twig #}
+{% extends 'AcmeHelloBundle::layout.html.twig' %}
+{% block content %}
+    Hello, welcome {{ app.environment }} use Symfony!
+    <a href="{{ path('acme_default_hello', {name: 'Guoshun Wu'}) }}">View Hello.</a>
+{% endblock %}
+
+ {% block javascripts %}
+    {{ parent() }}
+     <script src="{{ asset('bundles/acmehello/js/default.js') }}"></script>
+ {% endblock%}

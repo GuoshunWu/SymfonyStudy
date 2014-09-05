@@ -5,6 +5,7 @@ acme_default_hello:
   path:  /hellodefault/{name}
   defaults: { _controller: AcmeHelloBundle:Default:hello }
 
+# for hello controller
 acme_hello_show:
   resource: "@AcmeHelloBundle/Controller/HelloController.php"
   type: annotation
@@ -14,6 +15,9 @@ acme_hello_index:
   path:  /hello/{name}
   defaults: { _controller: AcmeHelloBundle:Hello:index }
 
+acme_hello_jsonres:
+  path:  /jsonres/{name}
+  defaults: { _controller: AcmeHelloBundle:Hello:jsonRes }
 
 
 

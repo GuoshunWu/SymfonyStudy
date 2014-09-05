@@ -9,11 +9,11 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return new Response("Hello, symphony.");
+        return $this->render('AcmeHelloBundle:Default:index.html.twig');
     }
 
     public function helloAction($name)
     {
-        return $this->render('AcmeHelloBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('AcmeHelloBundle:Default:hello.html.twig', array('name' => $name, 'now'=>date('Y-m-d H:i:s')));
     }
 }
